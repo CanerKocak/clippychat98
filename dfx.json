@@ -1,0 +1,41 @@
+{
+  "canisters": {
+    "ClippyChat98_backend": {
+      "candid": "src/ClippyChat98_backend/ClippyChat98_backend.did",
+      "declarations": {
+        "node_compatibility": true
+      },
+      "package": "ClippyChat98_backend",
+      "type": "rust"
+    },
+    "ClippyChat98_frontend": {
+      "dependencies": [
+        "ClippyChat98_backend"
+      ],
+      "source": [
+        "src/ClippyChat98_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "ClippyChat98_frontend"
+    },
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
